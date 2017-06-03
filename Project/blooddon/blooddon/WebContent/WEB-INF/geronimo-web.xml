@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns="http://geronimo.apache.org/xml/ns/j2ee/web-1.1">
+    <environment>
+        <moduleId>
+            <artifactId>MyWebApp</artifactId>
+        </moduleId>
+        <dependencies>
+            <dependency>
+                <groupId>console.dbpool</groupId>
+                <artifactId>jdbc_blood</artifactId>
+            </dependency>
+        </dependencies>
+    </environment>
+
+    <context-root>/MyWebApp</context-root>
+
+    <!-- security settings, if any, go here -->
+
+    <resource-ref>
+        <ref-name>jdbc/blood</ref-name>
+        <pattern>
+          <groupId>console.dbpool</groupId>
+          <artifactId>jdbc_blood</artifactId>
+          <name>jdbc/blood</name>
+        </pattern>
+    </resource-ref>
+</web-app>

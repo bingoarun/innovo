@@ -1,0 +1,86 @@
+<% 
+String ap =request.getParameter("a+");
+String am =request.getParameter("a-");
+String bp=request.getParameter("b+");
+String bm=request.getParameter("b-");
+String abp=request.getParameter("ab+");
+String abm=request.getParameter("ab-");
+String op=request.getParameter("o+");
+String om=request.getParameter("o-");
+String names=request.getParameter("names")
+%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link href="pagedesign.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form action="updatestk.jsp" method="post" id= "form1">
+<table width="583" height="372" border="0" cellpadding="2" cellspacing="2">
+  <tr>
+    <td colspan="2" class="tabletitle">Update stock</td>
+  </tr>
+  <tr>
+    <td width="271" align="right">Blood bank ID:</td>
+    <td width="292">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="right">A+</td>
+    <td><label>
+      <input type="text" name="a+" id="a+" value=<%= ap %>>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">A-</td>
+    <td><label>
+      <input type="text" name="a-" id="a-" value=<%= am %>>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">B+</td>
+    <td><label>
+      <input type="text" name="b+" id="b+" value=<%= bp %>>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">B-</td>
+    <td><label>
+      <input type="text" name="b-" id="b-" value=<%= bm %>>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">AB+</td>
+    <td><label>
+      <input type="text" name="ab+" id="ab+" value=<%= abp %>>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">AB-</td>
+    <td><label>
+      <input type="text" name="ab-" id="ab-" value=<%= abm %>>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">O+</td>
+    <td><label>
+      <input type="text" name="o+" id="o+" value=<%= op %>>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">O-</td>
+    <td><label>
+      <input type="text" name="o-" id="o-" value=<%= om %>>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">&nbsp;</td>
+    <td><input type="submit" name="update" id="update" value="Update"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

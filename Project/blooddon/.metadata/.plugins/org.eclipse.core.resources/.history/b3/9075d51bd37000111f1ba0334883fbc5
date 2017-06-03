@@ -1,0 +1,16 @@
+<%String Username=request.getParameter("name");
+String password=request.getParameter("password");
+String cpassword=request.getParameter("cpassword");
+String gender=request.getParameter("gender");
+String profession=request.getParameter("profession");
+String num=request.getParameter("num");
+String addr=request.getParameter("addr");
+String zip=request.getParameter("zip");
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/CYBERPRO");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+String str="insert into Prabhu.TEMP (Username,Password,Gender,Profession,Mobile_Number,Address,Zipcode) values('"+Username+"','"+password+"','"+gender+"','"+profession+"','"+num+"','"+addr+"','"+zip+"')";
+st.executeUpdate(str);
+%>

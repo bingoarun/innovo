@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>New transaction</title>
+<style type="text/css">
+<!--
+.formhead {
+	font-size: 30px;
+	color: #069;
+	text-align: left;
+}
+.formhead {
+	font-style: italic;
+}
+form text {
+	font-size: 12px;
+}
+.formtext {
+	font-size: 24px;
+	color: #006;
+	font-style: normal;
+	text-align: right;
+}
+-->
+</style>
+</head>
+
+<body class="formhead">
+<p class="formhead">Create transaction
+</p>
+<p>&nbsp;</p>
+<table width="712" height="257" border="0" align="left" cellpadding="2" cellspacing="2">
+  <tr>
+    <td colspan="2" align="right" class="formtext">Bank name:</td>
+    <td colspan="2"><form id="snd_bld" name="snd_bld" method="post" action="submit.jsp">
+      <label>
+        <select name="bnk_name" id="bnk_name">
+          <option>[Select a bank name]</option>
+        </select>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="formtext">Blood group:</td>
+    <td colspan="2"><label>
+      <select name="bld_grp" id="bld_grp">
+        <option>[Blood group]</option>
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="formtext">Units:</td>
+    <td colspan="2"><label>
+      <input type="text" name="unit" id="unit" />
+    </label></td>
+  </tr>
+  <tr>
+    <td width="263">&nbsp;</td>
+    <td width="67" align="center"><label>
+      <input type="submit" name="send" id="send" value="Send" />
+    </label></td>
+    <td width="91" align="center"><label>
+      <input type="submit" name="request" id="request" value="Request" />
+    </label></td>
+    <td width="265"><label>
+      <input type="reset" name="clear" id="clear" value="Reset" />
+    </label></form></td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<% 
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds =(javax.sql.DataSource)ctx.lookup("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection(); //Assume pool name as jdbc/mydbpool
+java.sql.Statement st = con.createStatement(); 
+%>
+<html>
+<head>
+<script type="text/javascript">
+function check(value){ 
+xmlHttp=GetXmlHttpObject()
+var url="checkajax.jsp";
+url=url+"?name="+value;
+xmlHttp.onreadystatechange=stateChanged 
+xmlHttp.open("GET",url,true)
+xmlHttp.send(null)
+}
+function stateChanged(){ 
+if(xmlHttp.readyState==4 || xmlHttp.readyState=="complete"){ 
+    var showdata = xmlHttp.responseText; 
+    document.getElementById("mydiv").innerHTML= showdata;
+    } 
+}
+function GetXmlHttpObject(){
+var xmlHttp=null;
+try{
+  xmlHttp=new XMLHttpRequest();
+ }
+catch (e) {
+ try {
+  xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+  }
+ catch (e){
+  xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+ }
+return xmlHttp;
+}
+</script>
+<script language="javaScript" type="text/javascript" src="calendar.js"></script>
+   <link href="calendar.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
+<!--
+h1 {
+	font-size: 24px;
+	color: #069;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-style: italic;
+}
+-->
+</style></head>
+<body>
+<form name="form" id ="form" action="insert_donor_reg.jsp"><br>
+</br>
+<h1>New user registration:</h1>
+ 
+
+<p>&nbsp;</p>
+<table width="538" height="724" border="0" align="center" cellpadding="2" cellspacing="2">
+  <tr>
+    <td width="181" align="right">Username:</td>
+    <td width="337"><input  type="text" name="name" id="name" onKeyUp="check(this.value);"><font color="red"><div id="mydiv"></div></font></td>
+  </tr>
+  <tr>
+    <td align="right">First name:</td>
+    <td><label>
+      <input type="text" name="fname" id="fname">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">Last name:</td>
+    <td><label>
+      <input type="text" name="lname" id="lname">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">Password:</td>
+    <td><label>
+      <input type="password" name="password" id="password">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">Confirm password:</td>
+    <td><label>
+      <input type="password" name="cpassword" id="cpassword">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">Date of birth:</td>
+    <td>
+     
+      <input type="text" name="datum1"><a href="#" onClick="setYears(1947, 2008);
+       showCalender(this, 'datum1');">
+      <img src="calender.png"></a>
+
+   
+	
+     
+
+    <table id="calenderTable">
+        <tbody id="calenderTableHead">
+          <tr>
+            <td colspan="4" align="center">
+	          <select onChange="showCalenderBody(createCalender(document.getElementById('selectYear').value,
+	           this.selectedIndex, false));" id="selectMonth">
+	              <option value="0">Jan</option>
+	              <option value="1">Feb</option>
+	              <option value="2">Mar</option>
+	              <option value="3">Apr</option>
+	              <option value="4">May</option>
+	              <option value="5">Jun</option>
+	              <option value="6">Jul</option>
+	              <option value="7">Aug</option>
+	              <option value="8">Sep</option>
+	              <option value="9">Oct</option>
+	              <option value="10">Nov</option>
+	              <option value="11">Dec</option>
+	          </select>
+            </td>
+            <td colspan="2" align="center">
+			    <select onChange="showCalenderBody(createCalender(this.value, 
+				document.getElementById('selectMonth').selectedIndex, false));" id="selectYear">
+				</select>
+			</td>
+            <td align="center">
+			    <a href="#" onClick="closeCalender();"><font color="#003333" size="+1">X</font></a>
+			</td>
+		  </tr>
+       </tbody>
+       <tbody id="calenderTableDays">
+         <tr style="">
+           <td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td>
+         </tr>
+       </tbody>
+       <tbody id="calender"></tbody>
+    </table>
+
+
+    
+    </td>
+  </tr>
+  <tr>
+    <td align="right">Mail ID:</td>
+    <td><input name="mail_id" type="text"></td>
+  </tr>
+  <tr>
+    <td align="right">Previous blood donation on:</td>
+    <td>
+    
+   
+      <input type="text" name="datum2"><a href="#" onClick="setYears(1947, 2008);
+       showCalender(this, 'datum2');">
+      <img src="calender.png"></a>
+
+    
+	
+    <!-- Calender Script  --> 
+
+    <table id="calenderTable">
+        <tbody id="calenderTableHead">
+          <tr>
+            <td colspan="4" align="center">
+	          <select onChange="showCalenderBody(createCalender(document.getElementById('selectYear').value,
+	           this.selectedIndex, false));" id="selectMonth">
+	              <option value="0">Jan</option>
+	              <option value="1">Feb</option>
+	              <option value="2">Mar</option>
+	              <option value="3">Apr</option>
+	              <option value="4">May</option>
+	              <option value="5">Jun</option>
+	              <option value="6">Jul</option>
+	              <option value="7">Aug</option>
+	              <option value="8">Sep</option>
+	              <option value="9">Oct</option>
+	              <option value="10">Nov</option>
+	              <option value="11">Dec</option>
+	          </select>
+            </td>
+            <td colspan="2" align="center">
+			    <select onChange="showCalenderBody(createCalender(this.value, 
+				document.getElementById('selectMonth').selectedIndex, false));" id="selectYear">
+				</select>
+			</td>
+            <td align="center">
+			    <a href="#" onClick="closeCalender();"><font color="#003333" size="+1">X</font></a>
+			</td>
+		  </tr>
+       </tbody>
+       <tbody id="calenderTableDays">
+         <tr style="">
+           <td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td>
+         </tr>
+       </tbody>
+       <tbody id="calender"></tbody>
+    </table>
+    
+    </td>
+  </tr>
+  <tr>
+    <td align="right">Blood group:</td>
+    <td><label>
+        <select name="bld_grp" id="bld_grp">
+          <option value="A+" >A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+      </label></td>
+  </tr>
+  <tr>
+    <td align="right">Phone number:</td>
+    <td><label>
+      <input type="text" name="phnum" id="phnum">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">Street name:</td>
+    <td><label>
+      <input type="text" name="street" id="street">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">State:</td>
+    <td><label>
+      <input type="text" name="state" id="state">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">District:</td>
+    <td><label>
+      <input type="text" name="district" id="district">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">City:</td>
+    <td><label>
+      <input type="text" name="city" id="city">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">Pincode:</td>
+    <td><input type="text" name="pincode" id="pincode"></td>
+  </tr>
+  <tr>
+    <td align="right"><label>
+      <input type="reset" name="reset" id="reset" value="Reset">
+    </label></td>
+    <td><label>
+      <input type="submit" name="submit" id="submit" value="Submit">
+    </label></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<%
+String names=request.getParameter("names");
+String manager_name=request.getParameter("manager_name");
+String name=request.getParameter("name");
+String password=request.getParameter("password");
+String cpassword=request.getParameter("cpassword");
+String mail_id=request.getParameter("mail_id");
+String phnum=request.getParameter("phnum");
+String landline_num=request.getParameter("landline_num");
+String address=request.getParameter("address");
+String state=request.getParameter("state");
+String district=request.getParameter("district");
+String city=request.getParameter("city");
+String pincode=request.getParameter("pincode");
+
+//date conversion
+
+
+
+//Create DB pool connection
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+
+String str="insert into arun.bloodbank (name,mail_id,phnum,landline_num,area,pincode,manager_name,login_status,password,names,status)  values('"+name+"','"+lname+"','"+name+"','"+password+"','"+bld_grp+"','"+ datum1+"','"+datum2+"','"+mail_id+"','"+phnum+"','"+"1"+"','"+ophnum+"','"+street+"','"+pincode+"','1',"+"0)";
+String id="select pincode from arun.location where pincode='"+pincode+"'";
+String locadd="insert into arun.location values('"+pincode+"','"+state+"','"+district+"','"+city+"')";
+java.sql.ResultSet rs = st.executeQuery(id);
+if( rs.next() ) //if next row exists, point to it and execute the loop
+{
+	st.executeUpdate(str);
+	//System.out.println(str);
+} 
+else
+{
+	st.executeUpdate(str);
+	st.executeUpdate(locadd);
+	//System.out.println(str);
+	//System.out.println(locadd);
+	
+}
+	//String q=" insert into arun.eventcamp_registration values ('"+usr_id+"','"+event_id+"',"+"current date)" ;
+	//st.executeUpdate(q);
+//Now row pointer of rs points to unreadable row
+%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>eventregistration</title>
+</head>
+<body>
+this is my page
+</body>
+</html>

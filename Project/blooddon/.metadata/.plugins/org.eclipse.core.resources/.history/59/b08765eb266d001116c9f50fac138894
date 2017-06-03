@@ -1,0 +1,68 @@
+<%
+String name=request.getParameter("name");
+String fname=request.getParameter("fname");
+String lname=request.getParameter("lname");
+String password=request.getParameter("password");
+String cpassword=request.getParameter("cpassword");
+String datum1=request.getParameter("datum1");
+String mail_id=request.getParameter("mail_id");
+String datum2=request.getParameter("datum2");
+String bld_grp=request.getParameter("bld_grp");
+String phnum=request.getParameter("phnum");
+String ophnum=request.getParameter("ophnum");
+String street=request.getParameter("street");
+String state=request.getParameter("state");
+String district=request.getParameter("district");
+String city=request.getParameter("city");
+String pincode=request.getParameter("pincode");
+String date1=new String(datum1);
+//date conversion
+String year=datum1.substring(6,10);
+date1=datum1.charAt(datum1.length()-4)+datum1.charAt(datum1.length()-3)+datum1.charAt(datum1.length()-2)+datum1.charAt(datum1.length()-1)+"-"+datum1.charAt(3)+datum1.charAt(4)+"-"+datum1.charAt(0)+datum1.charAt(1);
+//String date2=datum2.charAt(6)+datum2.charAt(7)+datum2.charAt(8)+datum2.charAt(9)+"-"+datum2.charAt(3)+datum2.charAt(4)+"-"+datum2.charAt(0)+datum2.charAt(1);
+
+
+//Create DB pool connection
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+
+String str="insert into arun.blooddonor (fname,lname,username,password,blood_grp,dob,prev_bld_date,mail_id,ph_num,login_status,office_phnum,address,pincode,availability,delete)  values('"+fname+"','"+lname+"','"+name+"','"+password+"','"+bld_grp+"','"+ datum1+"','"+datum2+"','"+mail_id+"','"+phnum+"','"+"1"+"','"+ophnum+"','"+street+"','"+pincode+"','1',"+"0)";
+String id="select pincode from arun.location where pincode='"+pincode+"'";
+String locadd="insert into arun.location values('"+pincode+"','"+state+"','"+district+"','"+city+"')";
+java.sql.ResultSet rs = st.executeQuery(id);
+System.out.println("date:"+datum1+"\n"+date1+"\nyear:"+year);
+System.out.println(datum1.length());
+System.out.println(datum1.charAt(7));
+if( rs.next() ) //if next row exists, point to it and execute the loop
+{
+	//st.executeUpdate(str);
+	System.out.println(str);
+} 
+else
+{
+	//st.executeUpdate(str);
+	//st.executeUpdate(locadd);
+	System.out.println(str);
+	System.out.println(locadd);
+	
+}
+	//String q=" insert into arun.eventcamp_registration values ('"+usr_id+"','"+event_id+"',"+"current date)" ;
+	//st.executeUpdate(q);
+//Now row pointer of rs points to unreadable row
+%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>eventregistration</title>
+</head>
+<body>
+this is my page
+</body>
+</html>

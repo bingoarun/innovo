@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Mail</title>
+<link href="pagedesign.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script language="JavaScript">
+function validate()
+{
+	var flag=0;
+	var to_id=document.form1.to_id.value;
+	if (to_id=="")
+		{
+		window.alert("Enter the sender ID ");
+		}
+	else
+		flag=1;
+	if(flag==1)
+		return true;
+	else
+		return false;
+}
+</script>
+<p>&nbsp;</p>
+<form name="form1" method="post" action="insert_mail.jsp" onsubmit="return validate()">
+<table width="687" height="371" border="0" cellpadding="2" cellspacing="2">
+  <tr>
+    <td colspan="2" class="tabletitle">Compose mail:</td>
+  </tr>
+  <tr>
+    <td width="161" align="right">To:</td>
+    <td width="506"><label>
+      <input type="text" name="to_id" id="to_id">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">Subject:</td>
+    <td><label>
+      <input type="text" name="subject" id="subject">
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right">Message</td>
+    <td><label>
+      <textarea name="message" id="message" cols="60" rows="8"></textarea>
+    </label></td>
+  </tr>
+  <tr>
+    <td align="right"><label>
+      <input type="reset" name="reset" id="reset" value="Reset">
+    </label></td>
+    <td><label>
+      <input type="submit" name="send" id="send" value="Send">
+    </label></td>
+  </tr>
+</table></form>
+<p>&nbsp;</p>
+</body>
+</html>

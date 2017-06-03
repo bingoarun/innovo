@@ -1,0 +1,120 @@
+<%
+//Create DB pool connection
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+//Get read-only access to session by passing false to getSession()
+javax.servlet.http.HttpSession ses=request.getSession(false);
+String uname=null;
+
+int etype=0;
+//Check whether a session variable is already present
+if((ses.getValue("uname")!=null) )
+{
+//Retrieve the values of session variables
+uname=(String)ses.getValue("uname");
+
+//Update database to record the log in status of user
+//st.executeUpdate("update arun.blooddonor set login_status=1 where username like '"+uname+"'");
+%>
+<script language="javascript">
+
+</script>
+<%
+}
+else //Session variables not present
+{
+%>
+<script language="JavaScript">
+alert("You must login to view this page. Redirecting to login page..");
+document.location="welcome.jsp"; //Redirect to login page
+</script>
+<%
+}
+
+String q="select * from arun.event where (days(current date)-days(end_date) >=0 )   " ;
+//
+java.sql.ResultSet rs = st.executeQuery(q);
+//Now row pointer of rs points to unreadable row
+%>
+<html>
+<head><link rel="stylesheet" href="tabledesign.css" /> 
+<link href="pagedesign.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2 class="pagemenu">Event registration</h2>
+<CENTER><span class="centerali">Note: Users cannot unregister from any event once registered</span> </CENTER><br>
+
+
+
+<table border="1" align="left" class="hovertable">
+
+<tr>
+<th> Program ID </th>
+<th> Program name  </th>
+<th> Program type  </th>
+<th> Start date </th>
+<th> End date  </th>
+<th> Start time  </th>
+<th> End time  </th>
+<th> Venue</th>
+</tr>
+<%
+String bdc_event=null;
+String str_tim=null;
+String end_tim=null;
+while( rs.next() ) //if next row exists, point to it and execute the loop
+{
+	etype=Integer.parseInt(rs.getString("bdc_event"));
+	if(etype==1)
+	{
+		bdc_event="Blood donation camp";
+		str_tim="-";
+		end_tim="-";
+		
+	}
+	else
+	{
+		bdc_event="Event";
+		str_tim=rs.getString("str_time");
+		end_tim=rs.getString("end_time");
+	}
+%>
+<tr onMouseOver="this.style.backgroundColor='#66c9ff';" onMouseOut="this.style.backgroundColor='#d4e3e5';">
+<td> <%= rs.getString("event_id") %> </td>
+<td> <%= rs.getString("pgm_name") %> </td>
+<td><%= bdc_event %> </td>
+<td><%= rs.getString("str_date") %> </td>
+<td><%= rs.getString("end_date") %> </td>
+<td><%= str_tim %> </td>
+<td><%= end_tim %> </td>
+<td><%= rs.getString("venue") %> </td>
+</tr>
+<%
+}
+%>
+</table>
+<table width="340" height="124" border="0" cellpadding="2" cellspacing="2">
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF" class="tabletitle">Enter the Program ID and click register:</td>
+  </tr>
+  <tr>
+    <td width="147" align="right" valign="middle" class="tableelements">Event ID:</td>
+    <td width="173" valign="bottom"><form name="form1" method="post" action="eventregistration.jsp">
+      <label>
+        <input type="text" name="event_id" id="event_id">
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><label>
+      <input type="submit" name="register" id="register" value="Register"></form>
+    </label></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

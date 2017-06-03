@@ -1,0 +1,63 @@
+<%
+
+String ap =request.getParameter("a+");
+String am =request.getParameter("a-");
+String bp=request.getParameter("b+");
+String bm=request.getParameter("b-");
+String abp=request.getParameter("ab+");
+String abm=request.getParameter("ab-");
+String op=request.getParameter("o+");
+String om=request.getParameter("o-");
+
+
+//Create DB pool connection
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+//Get read-only access to session by passing false to getSession()
+javax.servlet.http.HttpSession ses=request.getSession(false);
+String uname=null;
+
+
+//Check whether a session variable is already present
+if((ses.getValue("uname")!=null) )
+{
+//Retrieve the values of session variables
+uname=(String)ses.getValue("uname");
+
+String q="update arun.stock_history set a+="+ap+",a- ="+am+",b+ ="+bp+",b- ="+bm+",o+ ="+op+",o- ="+om+",ab+ = "+abp+",ab- ="+abm+" where bank_id =(select bank_id from arun.bloodbank where name="+uname+")";
+st.executeUpdate(q);
+%>
+<script language="javascript">
+
+
+</script>
+<%
+}
+else //Session variables not present
+{
+%>
+<script language="JavaScript">
+alert("Your access is restricted to view this page..");
+document.location="temp_loginfrm.jsp"; //Redirect to login page
+</script>
+<%
+}
+
+%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Blood donation Camp creation</title>
+<link href="blooddonor/successmsg.css" rel="stylesheet" type="text/css">
+</head>
+<body class="successmsg">
+Operation completed successfully !!!
+</body>
+</html>

@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1331826869213
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1331826869720
+activated,view,org.eclipse.ui.views.log,1.0.200.v20110404,"org.eclipse.pde.runtime.LogView",1331826870329
+activated,editor,org.eclipse.wst.html.ui,1.0.600.v201104211436,"org.eclipse.wst.html.core.htmlsource.source",1331826878063
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1331826890724
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1331826891068
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331826892497
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1331826894589
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1331826912357
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1331826915881
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331826919816
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1331826921428
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1331826922978
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1331826934695
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1331826939768
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331826942381
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331826947474
+opened,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331826948007
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331826948091
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1331826950181
+opened,editor,org.eclipse.wst.html.ui,1.0.600.v201104211436,"org.eclipse.wst.html.core.htmlsource.source",1331826953064
+activated,editor,org.eclipse.wst.html.ui,1.0.600.v201104211436,"org.eclipse.wst.html.core.htmlsource.source",1331826953212
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1331826954112
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331826962344
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1331826964762
+activated,view,org.eclipse.ui.views.log,1.0.200.v20110404,"org.eclipse.pde.runtime.LogView",1331826966188
+no handler,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1331826968901
+no handler,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1331826970376
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331826970977
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1331826971371
+activated,editor,org.eclipse.wst.html.ui,1.0.600.v201104211436,"org.eclipse.wst.html.core.htmlsource.source",1331826974165
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331826981617
+activated,editor,org.eclipse.wst.html.ui,1.0.600.v201104211436,"org.eclipse.wst.html.core.htmlsource.source",1331826985143
+activated,editor,org.eclipse.wst.html.ui,1.0.600.v201104211436,"org.eclipse.wst.html.core.htmlsource.source",1331826995398
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331827003624
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1331827005208
+activated,editor,org.eclipse.wst.html.ui,1.0.600.v201104211436,"org.eclipse.wst.html.core.htmlsource.source",1331827014027
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1331827014912
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1331827015428
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331827016929
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1331827018106
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1331827018686
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1331827024921
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331827033227
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331827040524
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1331827051285
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1331827058427
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.200.v20110505-0800,"org.eclipse.ltk.core.refactoring",1331827065943
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827066077
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827070036
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1331827071158
+activated,view,org.eclipse.ui.views.log,1.0.200.v20110404,"org.eclipse.pde.runtime.LogView",1331827089546
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1331827139390
+opened,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331827139697
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331827139790
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827182454
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827332679
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827334743
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827374680
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827379510
+started,bundle,org.eclipse.help.base,3.6.0.v201106131736,"org.eclipse.help.base",1331827391730
+started,bundle,org.eclipse.help.ui,3.5.100.v20110425,"org.eclipse.help.ui",1331827391760
+started,bundle,org.eclipse.ui.cheatsheets,3.4.100.v20110425,"org.eclipse.ui.cheatsheets",1331827392870
+started,bundle,org.eclipse.ui.intro,3.4.100.v20110425,"org.eclipse.ui.intro",1331827392992
+error,log,,,"Unhandled event loop exception",1331827397412
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827399106
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.help.aboutAction",1331827399116
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827406205
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827408600
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.help.aboutAction",1331827408610
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827413243
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827413373
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827413383
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827649479
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827650531
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827658774
+started,bundle,org.eclipse.equinox.p2.ui.sdk,1.0.200.v20110502-1955,"org.eclipse.equinox.p2.ui.sdk",1331827671761
+started,bundle,org.eclipse.equinox.p2.ui,2.1.0.v20110601,"org.eclipse.equinox.p2.ui",1331827671801
+started,bundle,org.eclipse.equinox.p2.transport.ecf,1.0.0.v20110510,"org.eclipse.equinox.p2.transport.ecf",1331827673937
+started,bundle,org.eclipse.ecf.filetransfer,5.0.0.v20110531-2218,"org.eclipse.ecf.filetransfer",1331827674019
+started,bundle,org.eclipse.ecf.identity,3.1.100.v20110531-2218,"org.eclipse.ecf.identity",1331827674025
+started,bundle,org.eclipse.ecf,3.1.300.v20110531-2218,"org.eclipse.ecf",1331827674100
+started,bundle,org.eclipse.ecf.provider.filetransfer.httpclient,4.0.0.v20110531-2218,"org.eclipse.ecf.provider.filetransfer.httpclient",1331827674201
+started,bundle,org.eclipse.ecf.provider.filetransfer,3.2.0.v20110531-2218,"org.eclipse.ecf.provider.filetransfer",1331827674201
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827674578
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827684271
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.200.v20110502-1955,"org.eclipse.equinox.p2.ui.sdk.install",1331827684291
+started,bundle,org.eclipse.equinox.p2.updatesite,1.0.300.v20110510,"org.eclipse.equinox.p2.updatesite",1331827687111
+started,bundle,org.eclipse.equinox.p2.publisher,1.2.0.v20110511,"org.eclipse.equinox.p2.publisher",1331827687125
+error,log,,,"Provisioning exception",1331827687977
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.200.v20110502-1955,"org.eclipse.equinox.p2.ui.sdk.update",1331827690511
+error,log,,,"Provisioning exception",1331827690531
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827691173
+started,bundle,org.eclipse.equinox.p2.extensionlocation,1.2.100.v20110510,"org.eclipse.equinox.p2.extensionlocation",1331827693649
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827694689
+error,log,,,"Provisioning exception",1331827701751
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827702008
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827790870
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.200.v20110502-1955,"org.eclipse.equinox.p2.ui.sdk.install",1331827790890
+started,bundle,org.eclipse.epp.mpc.core,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.core",1331827804324
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827805082
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827806262
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827806642
+error,log,,,"Unexpected exception: null",1331827822652
+error,log,,,"Unexpected exception: Stream closed",1331827822722
+error,log,,,"Unexpected exception: null",1331827822782
+error,log,,,"Unexpected exception: null",1331827822862
+error,log,,,"Unexpected exception: null",1331827822913
+error,log,,,"Unexpected exception: null",1331827822959
+error,log,,,"Unexpected exception: null",1331827823156
+error,log,,,"Unexpected exception: null",1331827823256
+error,log,,,"Unexpected exception: null",1331827823286
+error,log,,,"Unexpected exception: The system cannot find the path specified",1331827823646
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827823958
+executed,command,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui.command.showMarketplaceWizard",1331827823978
+error,log,,,"Provisioning exception",1331827828274
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827828479
+started,bundle,org.eclipse.equinox.p2.artifact.repository,1.1.100.v20110519,"org.eclipse.equinox.p2.artifact.repository",1331827911958
+started,bundle,org.eclipse.equinox.p2.publisher.eclipse,1.0.0.v20110511,"org.eclipse.equinox.p2.publisher.eclipse",1331827913078
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827940908
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.200.v20110502-1955,"org.eclipse.equinox.p2.ui.sdk.install",1331827940968
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827948145
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1331827957947
+error,log,,,"Provisioning exception",1331827972774
+error,log,,,"Error reading feature http://public.dhe.ibm.com/software/websphere/wasce/updates/features/com.ibm.wasce.v20.feature_2.1.1.jar.",1331827972774
+error,log,,,"Provisioning exception",1331827975089
+error,log,,,"Error reading feature http://public.dhe.ibm.com/software/websphere/wasce/updates/features/com.ibm.wasce.v21.feature_2.1.1.jar.",1331827975089
+error,log,,,"Provisioning exception",1331827977479
+error,log,,,"Error reading feature http://public.dhe.ibm.com/software/websphere/wasce/updates/features/com.ibm.wasce.v20.feature_2.1.3.jar.",1331827977479
+error,log,,,"Provisioning exception",1331827979769
+error,log,,,"Error reading feature http://public.dhe.ibm.com/software/websphere/wasce/updates/features/com.ibm.wasce.v21.feature_2.1.3.jar.",1331827979777
+error,log,,,"Provisioning exception",1331827982163
+error,log,,,"Error reading feature http://public.dhe.ibm.com/software/websphere/wasce/updates/features/com.ibm.wasce.v20.feature_2.1.4.jar.",1331827982173
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827988258
+executed,command,org.eclipse.equinox.p2.ui.sdk,1.0.200.v20110502-1955,"org.eclipse.equinox.p2.ui.sdk.install",1331827988274
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827992694
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827993098
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331827993298
+error,log,,,"Unexpected exception: Unknown Host: http://www.soyatec.com/euml2/images/eUML2_Studio_110x80.png",1331828014787
+error,log,,,"Unexpected exception: Unknown Host: http://www.eclipse.org/mylyn/images/image-epic.gif",1331828014937
+error,log,,,"Unexpected exception: Unknown Host: http://www.soyatec.com/eface/images/product_eface_110x80.png",1331828014999
+error,log,,,"Unexpected exception: Unknown Host: http://www.windowsazure4j.org/images/windowsazure4j_small.png",1331828015050
+error,log,,,"Unexpected exception: Unknown Host: http://www.eclipse.org/m2m/atl/resources/atlLogoSmall.png",1331828015123
+error,log,,,"Unexpected exception: Unknown Host: http://www.myeclipseide.com/modules/ContentExpress/img_repository/myeclipselogo2.jpg",1331828015232
+error,log,,,"Unexpected exception: Unknown Host: http://www.windowsazure4e.org/images/windowsazure4e_small.png",1331828016504
+started,bundle,org.eclipse.equinox.p2.director,2.1.0.v20110504-1715,"org.eclipse.equinox.p2.director",1331828066262
+started,bundle,org.eclipse.equinox.p2.garbagecollector,1.0.200.v20110510,"org.eclipse.equinox.p2.garbagecollector",1331828066302
+error,log,,,"Provisioning exception",1331828370751
+error,log,,,"Provisioning exception",1331828370762
+error,log,,,"Provisioning exception",1331828376034
+error,log,,,"Provisioning exception",1331828376323
+error,log,,,"Provisioning exception",1331828379479
+error,log,,,"Provisioning exception",1331828380260
+error,log,,,"Provisioning exception",1331828382461
+started,bundle,org.eclipse.equinox.p2.touchpoint.eclipse,2.1.0.v20110511,"org.eclipse.equinox.p2.touchpoint.eclipse",1331828394546
+started,bundle,org.eclipse.equinox.frameworkadmin,2.0.0.v20110502-1955,"org.eclipse.equinox.frameworkadmin",1331828394560
+started,bundle,org.eclipse.equinox.simpleconfigurator.manipulator,2.0.0.v20110502-1955,"org.eclipse.equinox.simpleconfigurator.manipulator",1331828394599
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828394738
+executed,command,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui.command.showMarketplaceWizard",1331828394761
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828395034
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828409827
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828414925
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828415096
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828415255
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828448952
+executed,command,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui.command.showMarketplaceWizard",1331828448965
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828449243
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828803090
+activated,view,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views.ContentOutline",1331828803117
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828812580
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828830419
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828838814
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828866103
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828901920
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331828988335
+error,log,,,"Provisioning exception",1331828997000
+error,log,,,"Provisioning exception",1331828997024
+error,log,,,"Provisioning exception",1331829001066
+error,log,,,"Provisioning exception",1331829001239
+error,log,,,"Provisioning exception",1331829003626
+error,log,,,"Provisioning exception",1331829003885
+error,log,,,"Provisioning exception",1331829005579
+error,log,,,"Provisioning exception",1331829005754
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829006543
+error,log,,,"Provisioning exception",1331829007690
+error,log,,,"An error occurred while collecting items to be installed",1331829008483
+error,log,,,"Provisioning exception",1331829010601
+error,log,,,"Provisioning exception",1331829010602
+error,log,,,"Some sites could not be found.  See the error log for more detail.",1331829010604
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829027550
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829036454
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829050302
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829053877
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829053980
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829054091
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829138390
+executed,command,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui.command.showMarketplaceWizard",1331829138400
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829138690
+error,log,,,"Provisioning exception",1331829153230
+error,log,,,"Provisioning exception",1331829153230
+error,log,,,"An error occurred while collecting items to be installed",1331829153240
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829156715
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1331829160047
+opened,view,org.eclipse.ui.ide,3.7.0.I20110519-0100,"org.eclipse.ui.views.ProgressView",1331829161387
+activated,view,org.eclipse.ui.ide,3.7.0.I20110519-0100,"org.eclipse.ui.views.ProgressView",1331829161407
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829169028
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829169320
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829169470
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829215986
+executed,command,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui.command.showMarketplaceWizard",1331829216006
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829216276
+error,log,,,"Provisioning exception",1331829218186
+error,log,,,"Provisioning exception",1331829218186
+error,log,,,"An error occurred while collecting items to be installed",1331829218196
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829218316
+activated,view,org.eclipse.ui.views.log,1.0.200.v20110404,"org.eclipse.pde.runtime.LogView",1331829218326
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829218646
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829229440
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829237064
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829248506
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829253598
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829253658
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829253808
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829313245
+executed,command,org.eclipse.epp.mpc.ui,1.1.1.I20110907-0947,"org.eclipse.epp.mpc.ui.command.showMarketplaceWizard",1331829313265
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829313547
+error,log,,,"Provisioning exception",1331829315287
+error,log,,,"Provisioning exception",1331829315297
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829558556
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829582773
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829595827
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829596889
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829632526
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829656255
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829800571
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331829809371
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830069409
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830073640
+error,log,,,"An error occurred while collecting items to be installed",1331830109269
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830120445
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830128606
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830184379
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830195356
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830196869
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830199427
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830328050
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830328377
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830423709
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830738543
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331830747559
+activated,editor,org.eclipse.jst.jsp.ui,1.1.600.v201105092017,"org.eclipse.jst.jsp.core.jspsource.source",1331830749166
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.I20110421-1800,"org.eclipse.ui.navigator.ProjectExplorer",1331830754096
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830852407
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830852579
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331830852579
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331831210927
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331831212768
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331831214406
+closed,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1331831214780
+stopped,bundle,org.eclipse.wst.dtd.ui,1.0.600.v201103171359,"org.eclipse.wst.dtd.ui",1331831215451
+stopped,bundle,org.eclipse.wst.wsdl.ui,1.2.402.v201105050214,"org.eclipse.wst.wsdl.ui",1331831215513
+stopped,bundle,org.eclipse.wst.xsd.ui,1.2.404.v201105050216,"org.eclipse.wst.xsd.ui",1331831215513
+stopped,bundle,org.eclipse.jpt.dbws.eclipselink.ui,1.0.0.v201104110000,"org.eclipse.jpt.dbws.eclipselink.ui",1331831215560
+stopped,bundle,org.eclipse.jpt.jaxb.eclipselink.ui,1.1.0.v201105110000,"org.eclipse.jpt.jaxb.eclipselink.ui",1331831215576
+stopped,bundle,org.eclipse.jpt.jaxb.ui,1.1.0.v201105180000,"org.eclipse.jpt.jaxb.ui",1331831215591
+stopped,bundle,org.eclipse.jst.ws.axis.creation.ui,1.0.700.v201104070312,"org.eclipse.jst.ws.axis.creation.ui",1331831215607
+stopped,bundle,org.eclipse.jst.ws.axis.consumption.ui,1.0.505.v201004211805,"org.eclipse.jst.ws.axis.consumption.ui",1331831215623
+stopped,bundle,org.eclipse.jst.ws.axis2.creation.ui,1.0.104.v201004211805,"org.eclipse.jst.ws.axis2.creation.ui",1331831215638
+stopped,bundle,org.eclipse.jst.ws.axis2.consumption.ui,1.0.103.v201004211805,"org.eclipse.jst.ws.axis2.consumption.ui",1331831215638
+stopped,bundle,org.eclipse.jst.ws.axis2.creation.core,1.0.106.v201004211805,"org.eclipse.jst.ws.axis2.creation.core",1331831215654
+stopped,bundle,org.eclipse.jst.ws.axis2.consumption.core,1.0.105.v201004211805,"org.eclipse.jst.ws.axis2.consumption.core",1331831215669
+stopped,bundle,org.eclipse.jst.ws.cxf.creation.ui,1.0.100.v201104022153,"org.eclipse.jst.ws.cxf.creation.ui",1331831215685
+stopped,bundle,org.eclipse.jst.ws.creation.ui,1.0.609.v201103082016,"org.eclipse.jst.ws.creation.ui",1331831215701
+stopped,bundle,org.eclipse.jst.ws.cxf.consumption.ui,1.0.0.v201003222311,"org.eclipse.jst.ws.cxf.consumption.ui",1331831215716
+stopped,bundle,org.eclipse.jst.ws.consumption.ui,1.1.400.v201103082016,"org.eclipse.jst.ws.consumption.ui",1331831215810

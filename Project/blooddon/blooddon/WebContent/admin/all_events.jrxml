@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="all_events" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="22"/>
+	<queryString language="SQL">
+		<![CDATA[select * from arun.event left join arun.bloodbank on event.bank_id = bloodbank.bank_id where event.delete=0 and event.bdc_event=1]]>
+	</queryString>
+	<field name="EVENT_ID" class="java.lang.Long"/>
+	<field name="DESCRIPTION" class="java.lang.String"/>
+	<field name="STR_DATE" class="java.sql.Date"/>
+	<field name="END_DATE" class="java.sql.Date"/>
+	<field name="STR_TIME" class="java.lang.String"/>
+	<field name="END_TIME" class="java.lang.String"/>
+	<field name="PGM_NAME" class="java.lang.String"/>
+	<field name="EVENT_STATUS" class="java.lang.String"/>
+	<field name="VENUE" class="java.lang.String"/>
+	<field name="BDC_EVENT" class="java.lang.Long"/>
+	<field name="BANK_ID" class="java.lang.Long"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="MAIL_ID" class="java.lang.String"/>
+	<field name="PHNUM" class="java.lang.String"/>
+	<field name="LANDLINE_NUM" class="java.lang.String"/>
+	<field name="PINCODE" class="java.lang.String"/>
+	<field name="MANAGER_NAME" class="java.lang.String"/>
+	<field name="LOGIN_STATUS" class="java.lang.Integer"/>
+	<field name="PASSWORD" class="java.lang.String"/>
+	<field name="NAMES" class="java.lang.String"/>
+	<field name="STATUS" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="353" y="28" width="164" height="41" forecolor="#006699"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="20"/>
+				</textElement>
+				<text><![CDATA[Events]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="16" width="100" height="20" forecolor="#3399FF"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[EVENT-ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="18" width="100" height="20" forecolor="#3399FF"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PGM-NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="18" width="100" height="20" forecolor="#3399FF"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[START DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="559" y="18" width="100" height="20" forecolor="#3399FF"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[MANAGER NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="669" y="18" width="100" height="20" forecolor="#3399FF"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PH-NUM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="18" width="100" height="20" forecolor="#3399FF"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Bank name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="18" width="100" height="20" forecolor="#3399FF"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[END DATE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="34" y="18" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EVENT_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="18" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PGM_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="18" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{STR_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="559" y="18" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MANAGER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="669" y="18" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PHNUM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="18" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{NAMES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="18" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{END_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

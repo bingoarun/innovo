@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="all_bloodbank" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="148"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from arun.bloodbank left join arun.location on bloodbank.pincode = location.pincode where bloodbank.status=0]]>
+	</queryString>
+	<field name="BANK_ID" class="java.lang.Long"/>
+	<field name="MAIL_ID" class="java.lang.String"/>
+	<field name="PHNUM" class="java.lang.String"/>
+	<field name="PINCODE" class="java.lang.String"/>
+	<field name="MANAGER_NAME" class="java.lang.String"/>
+	<field name="NAMES" class="java.lang.String"/>
+	<field name="STATE" class="java.lang.String"/>
+	<field name="DISTRICT" class="java.lang.String"/>
+	<field name="AREA" class="java.lang.String"/>
+	<group name="STATE">
+		<groupExpression><![CDATA[$F{STATE}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="260" y="15" width="196" height="32" forecolor="#6699FF"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="25"/>
+				</textElement>
+				<text><![CDATA[Blood Banks]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="22" width="100" height="20" forecolor="#0066CC"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[BANK ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="22" width="100" height="20" forecolor="#0066CC"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[MAIL ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="22" width="100" height="20" forecolor="#0066CC"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PH-NUM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="727" y="24" width="100" height="20" forecolor="#0066CC"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PINCODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="22" width="100" height="20" forecolor="#0066CC"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[BANK NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="22" width="100" height="20" forecolor="#0066CC"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[MANAGER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="637" y="24" width="100" height="20" forecolor="#0066CC"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[STATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="22" width="100" height="20" forecolor="#0066CC"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DISTRICT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{BANK_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MAIL_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PHNUM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="727" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PINCODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{NAMES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MANAGER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="637" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{STATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DISTRICT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

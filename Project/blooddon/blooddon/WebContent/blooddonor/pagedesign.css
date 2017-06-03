@@ -1,0 +1,23 @@
+.pagemenu {
+	color: #069;
+	font-style: italic;
+}
+.tableelements {
+	color: #039;
+}
+.tabletitle {
+	color: #036;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 18px;
+}
+.rightalig {
+	text-align: right;
+	color: #069;
+	font-weight: bold;
+	font-style: italic;
+}
+.centerali {
+	text-align: center;
+	color: #F00;
+}

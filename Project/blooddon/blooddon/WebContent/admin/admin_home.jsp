@@ -1,0 +1,227 @@
+<%
+//Create DB pool connection
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+java.sql.Statement st1 = con.createStatement();
+java.sql.Statement st2 = con.createStatement();
+//Get read-only access to session by passing false to getSession()
+javax.servlet.http.HttpSession ses=request.getSession(false);
+String uname=null;
+
+String eve="select * from arun.event";
+String evecomplete=null;
+String single_event=null;
+String pgmname=null;
+String description=null;
+String str_date=null;
+String urg="select * from arun.urgent";
+
+java.sql.ResultSet rs = st.executeQuery(eve);
+java.sql.ResultSet rs1 = st1.executeQuery(urg);
+String newline = System.getProperty("line.separator");
+
+//Check whether a session variable is already present
+if((ses.getValue("uname")!=null) )
+{
+//Retrieve the values of session variables
+uname=(String)ses.getValue("uname");
+String pro="select * from arun.blooddonor where username like '"+uname+"'";
+java.sql.ResultSet rs2 = st2.executeQuery(pro);
+//Update database to record the log in status of user
+
+}
+String userin=null;
+if(uname==null)
+{
+	userin="Guest";
+	System.out.println("guest");
+	
+}
+else
+	{
+	userin=uname;
+	System.out.println("user");
+	}
+%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<script>
+		!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="./fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+ 	<link rel="stylesheet" href="style.css" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			*   Examples - images
+			*/
+
+			$("a#example1").fancybox();
+
+			$("a#example2").fancybox({
+				'overlayShow'	: false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic'
+			});
+
+			$("a#example3").fancybox({
+				'transitionIn'	: 'none',
+				'transitionOut'	: 'none'	
+			});
+
+			$("a#example4").fancybox({
+				'opacity'		: true,
+				'overlayShow'	: false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'none'
+			});
+
+			$("a#example5").fancybox();
+
+			$("a#example6").fancybox({
+				'titlePosition'		: 'outside',
+				'overlayColor'		: '#000',
+				'overlayOpacity'	: 0.9
+			});
+
+			$("a#example7").fancybox({
+				'titlePosition'	: 'inside'
+			});
+
+			$("a#example8").fancybox({
+				'titlePosition'	: 'over'
+			});
+
+			$("a[rel=example_group]").fancybox({
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'titlePosition' 	: 'over',
+				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+				}
+			});
+
+			/*
+			*   Examples - various
+			*/
+
+			$("#various1").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+
+			$("#various2").fancybox();
+
+			$("a.various3").fancybox({
+				'width'				: '90%',
+				'height'			: '90%',
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'type'				: 'iframe'
+			});
+
+
+			$("#various4").fancybox({
+				'padding'			: 0,
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+		});
+	</script>
+
+<title>Insert title here</title>
+<style type="text/css">
+<!--
+.admintable {
+	color: #F63;
+	font-weight: bold;
+	font-size: 18px;
+}
+-->
+</style>
+</head>
+<body>
+<table width="867" height="364" border="1" align="center" cellpadding="2" cellspacing="2">
+  <tr>
+    <td width="237" align="center" bgcolor="#000000" class="admintable">Urgent Requirements</td>
+    <td width="191" align="center" bgcolor="#000000" class="admintable">Events</td>
+    <td width="225" align="center" bgcolor="#000000" class="admintable">Reports</td>
+    <td width="178" align="center" bgcolor="#000000" class="admintable">Others</td>
+  </tr>
+  <tr>
+    <td rowspan="3">
+     <marquee direction="up"> <table width="200"  border="0 cellpadding="2" cellspacing="2">
+          <%while(rs1.next())
+          {
+        		String name=rs1.getString("name");
+        		String phnum=rs1.getString("phnum");
+        		String bld_grp=rs1.getString("bld_grp");
+        		String district=rs1.getString("district");
+        		String state=rs1.getString("state");
+        		String single_req=name+"-"+phnum+"-"+bld_grp+"-"+district+"-"+state; %>
+        		<tr>
+    			<td><%= single_req %></td>
+    			</tr>
+   			<%
+    			
+          }
+    			%>
+    			</table>
+    			</marquee>
+        			
+    </td>
+    <td rowspan="3">
+     <marquee direction="up"> <table width="200"  border="0 cellpadding="2" cellspacing="2">
+          <%while(rs.next())
+          {
+        		pgmname=rs.getString("pgm_name");
+        		description=rs.getString("description");
+        		str_date=rs.getString("str_date");
+        		single_event=pgmname+"-"+description+"-"+str_date; %>
+        		<tr>
+    			<td><%= single_event %></td>
+    			</tr>
+   			  <%
+    			
+          }
+    			%>
+    			</table>
+    			</marquee>
+    
+    </td>
+    <td rowspan="3" valign="top"><p><a href="all_blooddonor.jsp">All blood donors report</a></p>
+    <p><a href="all_bloodbank.jsp">All blood banks report</a></p>
+    <p><a href="all_events.jsp">All events report</a></p>
+    <p><a href="all_camp.jsp">All blood donation camp report</a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p></td>
+    <td height="182" valign="top"><p><a class="various3" href="view_events.jsp">Manage Events</a></p>
+<p><a class="various3" href="view_bdonor.jsp">Manage blood donors</a></p>
+      <p><a class="various3" href="view_req.jsp">Manage urgent requirements</a></p>
+    <p><a class="various3" href="view_bb_admin.jsp">Manage blood banks</a></p>
+    <p><a class="various3" href="approve_bb.jsp">Approve blood banks</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td height="61"><a href="mail_box.jsp"><img src="image/mail.jpg" width="163" height="72" alt="mail"></a></td>
+  </tr>
+  <tr>
+    <td height="66" valign="top"><a href="logoutadmin.jsp"><img src="image/logout.png" width="164" height="67"></a></td>
+  </tr>
+</table>
+</body>
+</html>

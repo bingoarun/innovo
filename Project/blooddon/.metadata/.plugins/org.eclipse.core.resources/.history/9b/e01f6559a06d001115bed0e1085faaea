@@ -1,0 +1,49 @@
+<%
+String bank_id=request.getParameter("bank_id");
+String feedback=request.getParameter("feedback");
+String date=request.getParameter("datum3");
+//date conversion
+String date1=date.substring(6,10)+"-"+date.charAt(3)+date.charAt(4)+"-"+date.charAt(0)+date.charAt(1);
+
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+//Get read-only access to session by passing false to getSession()
+javax.servlet.http.HttpSession ses=request.getSession(false);
+String uname=null;
+uname=(String)ses.getValue("uname");
+
+//Create DB pool connection
+//Check whether a session variable is already present
+if((ses.getValue("uname")==null) )
+{
+	%>
+<script language="JavaScript">
+alert("You have not logged in at all.");
+document.location="index.jsp";
+</script>
+<% 
+}
+else
+{
+	String str="insert into arun.feedback (donor_id,feed_back,flag,bank_id,delete,donation_date)  values('(select donor_id from arun. blooddonor where username ='"+uname+"')','"+feedback+"',"+1+",'"+bank_id+"',"+0+",'"+ date1+"')";
+	st.executeUpdate(str);
+}
+
+%>
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>eventregistration</title>
+</head>
+<body>
+this is my page
+</body>
+</html>

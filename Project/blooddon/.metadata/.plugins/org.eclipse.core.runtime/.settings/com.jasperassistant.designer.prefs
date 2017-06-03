@@ -1,0 +1,14 @@
+#Mon Mar 19 19:33:38 IST 2012
+datasource.driver.0=com.ibm.db2.jcc.DB2Driver
+datasource.jarfile.0=D\:\\Program Files\\IBM\\WebSphere\\AppServerCommunityEdition\\repository\\com\\ibm\\db2\\db2jcc\\8.2\\db2jcc-8.2.jar
+Palette\ Size=141
+datasource.username.0=arun
+location_y=1362b4539f7
+datasource.password.0=quickdog
+location_x=1361a3fe077
+datasource.jarfile2.0=D\:\\Program Files\\IBM\\WebSphere\\AppServerCommunityEdition\\repository\\com\\ibm\\db2\\db2jcc_license_cu\\8.2\\db2jcc_license_cu-8.2.jar
+position=1361a3fe06f
+datasource.url.0=jdbc\:db2\://localhost\:50000/blooddon
+eclipse.preferences.version=1
+datasource.type.0=2
+datasource.name.0=blooddon

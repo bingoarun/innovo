@@ -1,0 +1,59 @@
+
+
+<%
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds =(javax.sql.DataSource)ctx.lookup("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection(); //Assume pool name as jdbc/mydbpool
+java.sql.Statement st = con.createStatement();
+javax.servlet.http.HttpSession ses=request.getSession(false);
+String uname=null;
+uname=(String)ses.getValue("uname");
+
+String q="select * from arun.mail left join arun.bloodbank on bloodbank.bank_id=mail.to_id where mail.to_id=('select donor_id from arun.bloodbank where uname='"+uname+"'))";
+java.sql.ResultSet rs = st.executeQuery(q);
+//Now row pointer of rs points to unreadable row
+
+//for second query
+
+%>
+<html>
+<head><link rel="stylesheet" href="tabledesign.css" /> </head>
+<body>
+Inbox:<br>
+
+<br>
+
+
+<table border="1" class="hovertable">
+<tr>
+<th> Bank ID </th>
+<th> Bank name </th>
+<th> Message</th>
+<th> Subject</th>
+<th> </th>
+<th> </th>
+</tr>
+<%
+while( rs.next() ) //if next row exists, point to it and execute the loop
+{
+	
+%>
+<tr onmouseover="this.style.backgroundColor='#66c9ff';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+<td> <%= rs.getString("bank_id") %> </td>
+<td> <%= rs.getString("name") %> </td>
+<td><%= rs.getString("message") %> </td>
+<td><%= rs.getString("subject") %> </td>
+<td> </td>
+<td> </td>
+
+</tr>
+<%
+}
+
+%>
+</table>
+
+</body>
+</html>
+
+

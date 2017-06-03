@@ -1,0 +1,63 @@
+
+
+<%
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds =(javax.sql.DataSource)ctx.lookup("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection(); //Assume pool name as jdbc/mydbpool
+java.sql.Statement st = con.createStatement();
+javax.servlet.http.HttpSession ses=request.getSession(false);
+String uname=null;
+
+String newadd="";
+//Check whether a session variable is already present
+//uname=(String)ses.getValue("uname");
+	uname="mohan";
+	
+	
+String q="select * from arun.feedback left join arun.blooddonor on blooddonor.donor_id=feedback.donor_id  where bank_id in (select bank_id from arun.bloodbank where name='"+ uname +"')";
+java.sql.ResultSet rs = st.executeQuery(q);
+//Now row pointer of rs points to unreadable row
+%>
+<html>
+<head><link rel="stylesheet" href="tabledesign.css" /> </head>
+<body>
+Feedbacks:
+
+<br>
+
+
+<table border="1" class="hovertable">
+<tr>
+<th> donor id </th>
+<th> donor name </th>
+<th> Mail ID </th>
+<th> Ph num </th>
+<th> Donation date </th>
+<th> Feed back </th>
+<th>status</th>
+
+</tr>
+<%
+while( rs.next() ) //if next row exists, point to it and execute the loop
+{
+	
+%>
+<tr onmouseover="this.style.backgroundColor='#66c9ff';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+<td> <%= rs.getString("donor_id") %> </td>
+<td> <%= rs.getString("fname") %> </td>
+<td> <%= rs.getString("mail_id") %> </td>
+<td> <%= rs.getString("ph_num") %> </td>
+<td> <%= rs.getString("donation_date") %> </td>
+<td><%= rs.getString("feed_back") %> </td>
+<td><form name="deletefeed" method="post" action="deletefeed.jsp"><input type="hidden" value="<%= rs.getString("fb_id") %>"><input type ="submit" value="Submit"></form></td>
+
+</tr>
+<%
+}
+%>
+</table>
+
+</body>
+</html>
+
+

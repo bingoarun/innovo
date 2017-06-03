@@ -1,0 +1,49 @@
+
+
+<%
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds =(javax.sql.DataSource)ctx.lookup("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection(); //Assume pool name as jdbc/mydbpool
+java.sql.Statement st = con.createStatement();
+javax.servlet.http.HttpSession ses=request.getSession(false);
+String uname=null;
+
+String name=request.getParameter("name");
+String m_id=request.getParameter("m_id");
+
+//Check whether a session variable is already present
+//uname=(String)ses.getValue("uname");
+	uname=(String)ses.getValue("uname");
+	
+	
+String q="select * from arun.mail where m_id="+m_id;
+java.sql.ResultSet rs = st.executeQuery(q);
+//Now row pointer of rs points to unreadable row
+%>
+<html>
+<head><link rel="stylesheet" href="tabledesign.css" /> </head>
+<body>
+Mail:
+
+<br>
+
+
+
+<%
+while( rs.next() ) //if next row exists, point to it and execute the loop
+{
+%>
+Sender:<%= name %>
+Subject:<%= subject %>
+Message:<%= message %>
+<%
+}
+%>
+
+
+
+
+</body>
+</html>
+
+

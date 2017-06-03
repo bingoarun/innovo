@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="all_blooddonor" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from arun.blooddonor left join arun.location on blooddonor.pincode=location.pincode where delete=0]]>
+	</queryString>
+	<field name="DONOR_ID" class="java.lang.Long"/>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="LNAME" class="java.lang.String"/>
+	<field name="BLOOD_GRP" class="java.lang.String"/>
+	<field name="MAIL_ID" class="java.lang.String"/>
+	<field name="PH_NUM" class="java.lang.String"/>
+	<field name="AREA" class="java.lang.String"/>
+	<field name="DISTRICT" class="java.lang.String"/>
+	<field name="STATE" class="java.lang.String"/>
+	<group name="STATE">
+		<groupExpression><![CDATA[$F{STATE}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="202" y="26" width="164" height="29" forecolor="#0066CC"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="20"/>
+				</textElement>
+				<text><![CDATA[Blood Donors]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="11" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="23" width="100" height="20" forecolor="#006699"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DONOR ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="23" width="100" height="20" forecolor="#006699"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="23" width="100" height="20" forecolor="#006699"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BLOOD-GRP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="607" y="23" width="100" height="20" forecolor="#006699"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISTRICT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="23" width="100" height="20" forecolor="#006699"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PH-NUM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="23" width="100" height="20" forecolor="#006699"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="23" width="100" height="20" forecolor="#006699"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAIL_ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DONOR_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{BLOOD_GRP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="607" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{DISTRICT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="478" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{PH_NUM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{STATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{MAIL_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

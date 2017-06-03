@@ -1,0 +1,51 @@
+<%
+String name=request.getParameter("name");
+String fname=request.getParameter("fname");
+String lname=request.getParameter("lname");
+String password=request.getParameter("password");
+String cpassword=request.getParameter("cpassword");
+String datum1=request.getParameter("datum1");
+String mail_id=request.getParameter("mail_id");
+String datum2=request.getParameter("datum2");
+String bld_grp=request.getParameter("bld_grp");
+String phnum=request.getParameter("phnum");
+String street=request.getParameter("street");
+String state=request.getParameter("state");
+String district=request.getParameter("district");
+String city=request.getParameter("city");
+String pincode=request.getParameter("pincode");
+
+
+//Create DB pool connection
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+
+
+
+
+String id="select pincode from arun.location where pincode='"+pincode+"'";
+java.sql.ResultSet rs = st.executeQuery(id);
+if( rs.next() ) //if next row exists, point to it and execute the loop
+{
+	alert('pincode already exists');
+}
+	//String q=" insert into arun.eventcamp_registration values ('"+usr_id+"','"+event_id+"',"+"current date)" ;
+	//st.executeUpdate(q);
+//Now row pointer of rs points to unreadable row
+%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>eventregistration</title>
+</head>
+<body>
+this is my page
+</body>
+</html>

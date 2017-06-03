@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<%
+//Create DB pool connection
+javax.naming.InitialContext ctx= new javax.naming.InitialContext();
+javax.sql.DataSource ds = (javax.sql.DataSource) ctx.lookup
+("java:comp/env/jdbc/blooddon");
+java.sql.Connection con = ds.getConnection();
+java.sql.Statement st = con.createStatement();
+//Get read-only access to session by passing false to getSession()
+javax.servlet.http.HttpSession ses=request.getSession(false);
+String uname=null;
+
+String eve="select * from arun.event";
+String evecomplete=null;
+String single_event=null;
+String pgmname=null;
+String description=null;
+String str_date=null;
+java.sql.ResultSet rs = st.executeQuery(eve);
+
+String newline = System.getProperty("line.separator");
+
+//Check whether a session variable is already present
+if((ses.getValue("uname")!=null) )
+{
+//Retrieve the values of session variables
+uname=(String)ses.getValue("uname");
+
+//Update database to record the log in status of user
+
+}
+%>
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.menutable {
+	color: #FFF;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.menut {
+	color: #FFF;
+}
+.eventmenu {
+	color: #FFF;
+}
+.welcome {
+	color: #FFF;
+}
+.events {
+	color: #FFF;
+}
+-->
+</style>
+</head>
+
+<body id="jb" >
+ <form id="form1" name="form1" method="post" action="submit_donor_reg.jsp">
+          <label>
+            <center><input name="sessionname" type="text" disabled="disabled" id="sessionname" value="Welcome <%=uname %> !!!" /></center>
+          </label>
+ </form>
+ </br>
+<p align="center"></p>
+<div align="center">
+  <table width="1138" height="871" border="1" cellpadding="5" cellspacing="10">
+    <tr>
+      <td width="244" height="435"><table width="244" height="423" border="0" cellspacing="5">
+        <tr>
+          <td width="234" height="34" bgcolor="#000000" ><div align="center" class="eventmenu"><em><strong>Urgent requirements</strong></em></div></td>
+        </tr>
+        <tr>
+          <td height="374"><marquee direction="up">urgent</marquee>&nbsp;</td>
+        </tr>
+      </table></td>
+      <td width="466" rowspan="3"><div align="center">
+        <table width="466" height="649" border="0">
+          <tr>
+            <td height="38" bgcolor="#000000" class="welcome"><div align="center"><strong><em>Welcome</em></strong></div></td>
+            </tr>
+          <tr>
+            <td height="605">&nbsp;</td>
+            </tr>
+        </table>
+      </div></td>
+      <td width="350"><table width="345" height="396" border="0" cellspacing="0">
+        <tr>
+          <td height="36" colspan="2" bgcolor="#000000"><div align="center" class="menut"><em><strong>Login</strong></em></div></td>
+          </tr>
+        <tr>
+          <td width="145" height="72"><div align="right">Username:</div></td>
+          <td width="190"><form id="login" name="login" method="post" action="createsession.jsp">
+            <label>
+              <input type="text" name="uname" id="uname" />
+            </label>
+      </td>
+        </tr>
+        <tr>
+          <td><div align="right">Password:</div></td>
+          <td>
+            <label>
+              <input type="password" name="pass" id="pass" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td height="64" colspan="2">
+            <label>
+              <div align="center">
+                <input type="submit" name="Login" id="Login" value="Submit" /></form>
+                <br />
+              </div>
+            </label>
+          </form></td>
+          </tr>
+        <tr>
+          <td height="21" colspan="2"><div align="center"><a href="passwordrec.html" > Forgot password ? </a></div></td>
+        </tr>
+        <tr>
+          <td height="179" colspan="2"><div align="center"><a href="donor_reg.jsp" target="sec"><img src="images/register.jpg" alt="Sign up" width="262" height="99" align="middle" /></a></div></td>
+          </tr>
+      </table>
+      <div align="justify"></div></td>
+    </tr>
+    <tr>
+      <td height="159" rowspan="2"><table width="249" height="171" border="0">
+        <tr>
+          <td height="29" bgcolor="#000000" class="events"><div align="center"><strong><em>Events</em></strong></div></td>
+        </tr>
+        <tr>
+          <td height="115">
+          <table width="182"  border="1" cellpadding="2" cellspacing="2">
+          <%= while(rs.next())
+          {
+        		pgmname=rs.getString("pgm_name");
+        		description=rs.getString("description");
+        		str_date=rs.getString("str_date");
+        		single_event=pgmname+"-"+description+"-"+str_date; %>
+        		<tr>
+    			<td><%= single_event %></td>
+    			</tr>
+        			
+        	
+        	</td>
+        </tr>
+      </table></td>
+      <td height="101"><div align="center"><img src="images/findblooddonor.gif" width="360" height="85" alt="findblooddonor" /></div></td>
+    </tr>
+    <tr>
+      <td height="89"><div align="center"><img src="images/bloodrequest.gif" width="335" height="89" alt="bloodrequest" /></div></td>
+    </tr>
+    <tr>
+      <td height="156"><div align="center"><img src="images/photogalary.jpg" width="188" height="182" alt="photo galary" /></div></td>
+      <td>&nbsp;</td>
+      <td><div align="center">
+        <table width="316" border="0">
+          <tr>
+            <td width="142" height="156"><div align="center"><a href="../bloodbank_index.html" target="mainframe" ><img src="images/bbank.jpg" width="103" height="133" alt="bloodbank" /></a></div></td>
+            <td width="158"><div align="center"><a href="administrator.html" target="mainFrame"><img src="images/admin.jpg" width="113" height="141" alt="admin" /></a></div></td>
+          </tr>
+        </table>
+      </div></td>
+    </tr>
+  </table>
+</div>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
